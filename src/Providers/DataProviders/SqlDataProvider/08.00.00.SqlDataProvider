@@ -315,3 +315,7 @@ BEGIN
 	ORDER BY Requests DESC
 END
 GO
+
+--Create Schedule Job
+INSERT INTO {databaseOwner}[{objectQualifier}Schedule] ([TypeFullName], [TimeLapse], [TimeLapseMeasurement], [RetryTimeLapse], [RetryTimeLapseMeasurement], [RetainHistoryNum], [AttachToEvent], [CatchUpEnabled], [Enabled], [ObjectDependencies], [Servers], [CreatedByUserID], [CreatedOnDate], [LastModifiedByUserID], [LastModifiedOnDate], [FriendlyName]) VALUES ('Dnn.Modules.SiteLog.Components.PurgeSiteLog, Dnn.Modules.SiteLog', 1, 'd', 2, 'h', 10, '', 0, 1, 'SiteLog', NULL, NULL, NULL, NULL, NULL, N'Purge Site Log')
+GO

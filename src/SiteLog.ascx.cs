@@ -30,6 +30,7 @@ using DotNetNuke.Common;
 using DotNetNuke.Common.Lists;
 using DotNetNuke.Entities.Host;
 using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Portals;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Localization;
@@ -225,7 +226,8 @@ namespace Dnn.Modules.SiteLog
                     }
                     else
                     {
-                        switch (PortalSettings.SiteLogHistory)
+                        var siteLogHistory = PortalController.GetPortalSettingAsInteger("SiteLogHistory", PortalSettings.PortalId, 0);
+                        switch (siteLogHistory)
                         {
                             case -1: //unlimited
                                 break;
@@ -234,7 +236,7 @@ namespace Dnn.Modules.SiteLog
                                 break;
                             default:
                                 DotNetNuke.UI.Skins.Skin.AddModuleMessage(this,
-                                                               string.Format(Localization.GetString("LogHistory", LocalResourceFile), PortalSettings.SiteLogHistory),
+                                                               string.Format(Localization.GetString("LogHistory", LocalResourceFile), siteLogHistory),
                                                                ModuleMessage.ModuleMessageType.YellowWarning);
                                 break;
                         }

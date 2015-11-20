@@ -5,7 +5,7 @@
     <Extension>zip</Extension>
     <DNNFileName>dnn_SiteLog</DNNFileName>
     <PackageName>DNNCE_SiteLog</PackageName>
-    <ModuleFolderName>$(WebsitePath)\DesktopModules\Admin\SiteLog</ModuleFolderName>
+    <ModuleFolderName>$(WebsitePath)\DesktopModules\SiteLog</ModuleFolderName>
   </PropertyGroup>
   <Import Project="$(BuildScriptsPath)\Package.Targets" />
   <Import Project="$(BuildScriptsPath)\Module.Build"/>

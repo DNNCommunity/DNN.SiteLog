@@ -13,10 +13,13 @@
             <license src="license.txt" />
             <releaseNotes src="releaseNotes.txt" />
             <azureCompatible>true</azureCompatible>
+            <dependencies>
+                <dependency type="CoreVersion">08.00.00</dependency>
+            </dependencies>
             <components>
                 <component type="Script">
                     <scripts>
-                        <basePath>DesktopModules\Admin\Vendors</basePath>
+                        <basePath>DesktopModules\SiteLog</basePath>
                         <script type="Install">
                             <path>Providers\DataProviders\SqlDataProvider</path>
                             <name>08.00.00.SqlDataProvider</name>
@@ -31,7 +34,7 @@
                 <component type="Module">
                     <desktopModule>
                         <moduleName>SiteLog</moduleName>
-                        <foldername>Admin/SiteLog</foldername>
+                        <foldername>SiteLog</foldername>
                         <businessControllerClass></businessControllerClass>
                         <supportedFeatures>
                             <supportedFeature type="Upgradeable" />
@@ -48,7 +51,7 @@
                                 <moduleControls>
                                     <moduleControl>
                                         <controlKey />
-                                        <controlSrc>DesktopModules/Admin/SiteLog/SiteLog.ascx</controlSrc>
+                                        <controlSrc>DesktopModules/SiteLog/SiteLog.ascx</controlSrc>
                                         <controlTitle />
                                         <controlType>View</controlType>
                                         <iconFile>~/Icons/Sigma/SiteLog_32X32_Standard.png</iconFile>
@@ -70,9 +73,30 @@
                         </assembly>
                     </assemblies>
                 </component>
+                <component type="Config">
+                    <config>
+                        <configFile>web.config</configFile>
+                        <install>
+                            <configuration>
+                                <nodes>
+                                    <node path="/configuration/system.webServer/modules" action="update" key="name" collision="ignore">
+                                        <add name="SiteLog" type="Dnn.Modules.SiteLog.HttpModules.SiteLogModule, Dnn.Modules.SiteLog" preCondition="managedHandler"/>
+                                    </node>
+                                </nodes>
+                            </configuration>
+                        </install>
+                        <uninstall>
+                            <configuration>
+                                <nodes>
+                                    <node path="/configuration/system.webServer/modules/add[@name='SiteLog']" action="remove"/>
+                                </nodes>
+                            </configuration>
+                        </uninstall>
+                    </config>
+                </component>
                 <component type="ResourceFile">
                     <resourceFiles>
-                        <basePath>DesktopModules/Admin/SiteLog</basePath>
+                        <basePath>DesktopModules/SiteLog</basePath>
                         <resourceFile>
                             <name>Resources.zip</name>
                         </resourceFile>
@@ -81,7 +105,7 @@
                 <component type="Cleanup" version="08.00.00" fileName ="08.00.00.txt" />
                 <component type="File">
                     <files>
-                        <basePath>DesktopModules\Admin\SiteLog</basePath>
+                        <basePath>DesktopModules\SiteLog</basePath>
                         <file>
                             <name>08.00.00.txt</name>
                         </file>

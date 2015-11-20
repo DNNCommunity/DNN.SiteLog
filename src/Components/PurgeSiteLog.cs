@@ -69,9 +69,10 @@ namespace Dnn.Modules.SiteLog.Components
             for (var index = 0; index <= portals.Count - 1; index++)
             {
                 var portal = (PortalInfo) portals[index];
-                if (portal.SiteLogHistory > 0)
+                var siteLogHistory = PortalController.GetPortalSettingAsInteger("SiteLogHistory", portal.PortalID, 0);
+                if (siteLogHistory > 0)
                 {
-                    var purgeDate = DateTime.Now.AddDays(-(portal.SiteLogHistory));
+                    var purgeDate = DateTime.Now.AddDays(-siteLogHistory);
                     siteLogController.DeleteSiteLog(purgeDate, portal.PortalID);
                 }
             }

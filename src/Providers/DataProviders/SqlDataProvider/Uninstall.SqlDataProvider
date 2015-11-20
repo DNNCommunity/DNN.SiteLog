@@ -48,3 +48,6 @@ GO
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}SiteLog]') AND type in (N'U'))
 	DROP TABLE {databaseOwner}[{objectQualifier}SiteLog]
 GO
+
+DELETE FROM {databaseOwner}[{objectQualifier}Schedule] WHERE FriendlyName = 'Purge Site Log'
+GO
