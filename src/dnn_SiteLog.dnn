@@ -40,7 +40,7 @@
                             <supportedFeature type="Upgradeable" />
                         </supportedFeatures>
                         <page type="Admin" common="false">
-                            <name>Site Log</name>
+                            <name>SiteLog</name>
                             <icon>~/Icons/Sigma/SiteLog_16X16_Standard.png</icon>
                             <largeIcon>~/Icons/Sigma/SiteLog_32X32_Standard.png</largeIcon>
                             <description>View statistical reports on site activity for the portal.</description>
@@ -101,15 +101,6 @@
                             <name>Resources.zip</name>
                         </resourceFile>
                     </resourceFiles>
-                </component>
-                <component type="Cleanup" version="08.00.00" fileName ="08.00.00.txt" />
-                <component type="File">
-                    <files>
-                        <basePath>DesktopModules\SiteLog</basePath>
-                        <file>
-                            <name>08.00.00.txt</name>
-                        </file>
-                    </files>
                 </component>
             </components>
         </package>

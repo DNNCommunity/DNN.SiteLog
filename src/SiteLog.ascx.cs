@@ -214,34 +214,22 @@ namespace Dnn.Modules.SiteLog
                 //If this is the first visit to the page, bind the role data to the datalist
                 if (Page.IsPostBack == false)
                 {
-                    var strSiteLogStorage = "D";
-                    if (!string.IsNullOrEmpty(Host.SiteLogStorage))
+                    var siteLogHistory = PortalController.GetPortalSettingAsInteger("SiteLogHistory", PortalSettings.PortalId, 0);
+                    switch (siteLogHistory)
                     {
-                        strSiteLogStorage = Host.SiteLogStorage;
+                        case -1: //unlimited
+                            break;
+                        case 0:
+                            DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("LogDisabled", LocalResourceFile), ModuleMessage.ModuleMessageType.YellowWarning);
+                            break;
+                        default:
+                            DotNetNuke.UI.Skins.Skin.AddModuleMessage(this,
+                                                            string.Format(Localization.GetString("LogHistory", LocalResourceFile), siteLogHistory),
+                                                            ModuleMessage.ModuleMessageType.YellowWarning);
+                            break;
                     }
-                    if (strSiteLogStorage == "F")
-                    {
-                        DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("FileSystem", LocalResourceFile), ModuleMessage.ModuleMessageType.YellowWarning);
-                        cmdDisplay.Visible = false;
-                    }
-                    else
-                    {
-                        var siteLogHistory = PortalController.GetPortalSettingAsInteger("SiteLogHistory", PortalSettings.PortalId, 0);
-                        switch (siteLogHistory)
-                        {
-                            case -1: //unlimited
-                                break;
-                            case 0:
-                                DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("LogDisabled", LocalResourceFile), ModuleMessage.ModuleMessageType.YellowWarning);
-                                break;
-                            default:
-                                DotNetNuke.UI.Skins.Skin.AddModuleMessage(this,
-                                                               string.Format(Localization.GetString("LogHistory", LocalResourceFile), siteLogHistory),
-                                                               ModuleMessage.ModuleMessageType.YellowWarning);
-                                break;
-                        }
-                        cmdDisplay.Visible = true;
-                    }
+                    cmdDisplay.Visible = true;
+
                     var ctlList = new ListController();
                     var colSiteLogReports = ctlList.GetListEntryInfoItems("Site Log Reports");
 

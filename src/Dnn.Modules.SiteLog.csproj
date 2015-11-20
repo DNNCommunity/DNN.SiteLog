@@ -96,7 +96,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="08.00.00.txt" />
     <Content Include="App_LocalResources\SiteLog.ascx.resx" />
     <Content Include="license.txt" />
     <Content Include="module.css" />

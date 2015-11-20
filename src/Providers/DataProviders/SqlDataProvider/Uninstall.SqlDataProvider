@@ -49,5 +49,5 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP TABLE {databaseOwner}[{objectQualifier}SiteLog]
 GO
 
-DELETE FROM {databaseOwner}[{objectQualifier}Schedule] WHERE FriendlyName = 'Purge Site Log'
+DELETE FROM {databaseOwner}[{objectQualifier}Schedule] WHERE TypeFullName = 'Dnn.Modules.SiteLog.Components.PurgeSiteLog, Dnn.Modules.SiteLog'
 GO
