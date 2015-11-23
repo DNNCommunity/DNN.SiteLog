@@ -37,6 +37,24 @@ namespace Dnn.Modules.SiteLog.HttpModules
 
         public void Init(HttpApplication context)
         {
+            context.BeginRequest += OnBeginRequest;
+        }
+
+        public void Dispose()
+        {
+        }
+
+        private void OnBeginRequest(object sender, EventArgs e)
+        {
+            var application = sender as HttpApplication;
+            var context = application.Context;
+
+            //First check if we are upgrading/installing
+            if (!Initialize.ProcessHttpModule(context.ApplicationInstance.Request, false, false))
+            {
+                return;
+            }
+
             if (SiteLogHistory != 0)
             {
                 var request = context.Request;
@@ -81,8 +99,5 @@ namespace Dnn.Modules.SiteLog.HttpModules
             }
         }
 
-        public void Dispose()
-        {
-        }
     }
 }

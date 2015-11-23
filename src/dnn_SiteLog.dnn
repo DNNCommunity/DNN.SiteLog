@@ -36,9 +36,6 @@
                         <moduleName>SiteLog</moduleName>
                         <foldername>SiteLog</foldername>
                         <businessControllerClass></businessControllerClass>
-                        <supportedFeatures>
-                            <supportedFeature type="Upgradeable" />
-                        </supportedFeatures>
                         <page type="Admin" common="false">
                             <name>SiteLog</name>
                             <icon>~/Icons/Sigma/SiteLog_16X16_Standard.png</icon>
