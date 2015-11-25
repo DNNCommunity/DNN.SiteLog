@@ -42,20 +42,25 @@
     <DocumentationFile>bin\Dnn.Modules.SiteLog.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClientDependency.Core">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.457\lib\ClientDependency.Core.dll</HintPath>
+    <Reference Include="ClientDependency.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\ClientDependency.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.457\lib\DotNetNuke.dll</HintPath>
+    <Reference Include="DotNetNuke, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Instrumentation">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.457\lib\DotNetNuke.Instrumentation.dll</HintPath>
+    <Reference Include="DotNetNuke.Instrumentation, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.Instrumentation.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Web">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.457\lib\DotNetNuke.Web.dll</HintPath>
+    <Reference Include="DotNetNuke.Web, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.Web.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Web.Deprecated">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.457\lib\DotNetNuke.Web.Deprecated.dll</HintPath>
+    <Reference Include="DotNetNuke.Web.Deprecated, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.Web.Deprecated.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -75,7 +80,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Telerik.Web.UI">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.457\lib\net40\Telerik.Web.UI.dll</HintPath>
+      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\net40\Telerik.Web.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
