@@ -18,7 +18,7 @@
 
             </div>
             <div class="dnnFormItem">
-                <dnn:label id="plEndDate1" runat="server" controlname="txtEndDate" suffix=":" />
+                <dnn:label id="plEndDate" runat="server" controlname="txtEndDate" suffix=":" />
                 <dnn:dnndatepicker ID="diEndDate" runat="server" />
                 <asp:comparevalidator id="valEndDate" cssclass="NormalRed" runat="server" resourcekey="valEndDate" display="Dynamic" type="Date" operator="DataTypeCheck" controltovalidate="diEndDate" />
 

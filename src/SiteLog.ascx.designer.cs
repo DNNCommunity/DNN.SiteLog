@@ -67,13 +67,13 @@ namespace Dnn.Modules.SiteLog {
         protected global::System.Web.UI.WebControls.CompareValidator valStartDate;
         
         /// <summary>
-        /// plEndDate1 control.
+        /// plEndDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl plEndDate1;
+        protected global::System.Web.UI.UserControl plEndDate;
         
         /// <summary>
         /// diEndDate control.
