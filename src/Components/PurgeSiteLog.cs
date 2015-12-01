@@ -62,7 +62,7 @@ namespace Dnn.Modules.SiteLog.Components
             }
         }
 
-        private void DoPurgeSiteLog()
+        private static void DoPurgeSiteLog()
         {
             var siteLogController = new SiteLogController();
             var portals = PortalController.Instance.GetPortals();
@@ -70,11 +70,8 @@ namespace Dnn.Modules.SiteLog.Components
             {
                 var portal = (PortalInfo) portals[index];
                 var siteLogHistory = PortalController.GetPortalSettingAsInteger("SiteLogHistory", portal.PortalID, 0);
-                if (siteLogHistory > 0)
-                {
-                    var purgeDate = DateTime.Now.AddDays(-siteLogHistory);
-                    siteLogController.DeleteSiteLog(purgeDate, portal.PortalID);
-                }
+                var purgeDate = DateTime.Now.AddDays(-(siteLogHistory));
+                siteLogController.DeleteSiteLog(purgeDate, portal.PortalID);
             }
         }
     }
