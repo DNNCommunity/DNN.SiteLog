@@ -4,6 +4,6 @@
     <WebsitePath>$(MSBuildProjectDirectory)\Website</WebsitePath>
     <WebsiteBinPath>$(WebsitePath)\bin</WebsiteBinPath>
     <WebsiteBinProvidersPath>$(WebsitePath)\bin\Providers</WebsiteBinProvidersPath>
-    <WebsiteInstallPath>$(WebsitePath)\Install\Module</WebsiteInstallPath>
+    <WebsiteInstallPath>$(MSBuildProjectDirectory)\Install</WebsiteInstallPath>
   </PropertyGroup>
 </Project>

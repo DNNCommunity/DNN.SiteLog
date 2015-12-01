@@ -42,25 +42,25 @@
     <DocumentationFile>bin\Dnn.Modules.SiteLog.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClientDependency.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DotNetNuke, Version=8.0.0.583, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\ClientDependency.Core.dll</HintPath>
+      <HintPath>packages\DotNetNuke.Core.8.0.0.583\lib\net40\DotNetNuke.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.dll</HintPath>
+    <Reference Include="DotNetNuke.Instrumentation">
+      <HintPath>packages\DotNetNuke.Instrumentation.8.0.0.583\lib\net40\DotNetNuke.Instrumentation.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Instrumentation, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.Instrumentation.dll</HintPath>
+    <Reference Include="DotNetNuke.Web">
+      <HintPath>packages\DotNetNuke.Web.8.0.0.580\lib\net40\DotNetNuke.Web.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Web, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.Web.dll</HintPath>
+    <Reference Include="DotNetNuke.Web.Deprecated">
+      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.580\lib\net40\DotNetNuke.Web.Deprecated.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Web.Deprecated, Version=8.0.0.562, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DotNetNuke.WebUtility">
+      <HintPath>packages\DotNetNuke.Web.8.0.0.580\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\DotNetNuke.Web.Deprecated.dll</HintPath>
+      <HintPath>packages\DotNetNuke.Core.8.0.0.583\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -79,8 +79,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Web.UI">
-      <HintPath>packages\DotNetNuke.Bundle.8.0.0.562\lib\net40\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.580\lib\net40\Telerik.Web.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -116,11 +117,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Providers\DataProviders\SqlDataProvider\08.00.00.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\Uninstall.SqlDataProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
