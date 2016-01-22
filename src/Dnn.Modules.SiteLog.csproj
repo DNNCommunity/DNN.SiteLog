@@ -42,25 +42,33 @@
     <DocumentationFile>bin\Dnn.Modules.SiteLog.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke, Version=8.0.0.583, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Core.8.0.0.583\lib\net40\DotNetNuke.dll</HintPath>
+    <Reference Include="DotNetNuke, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.8.0.0.809\lib\net40\DotNetNuke.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DotNetNuke.Instrumentation">
-      <HintPath>packages\DotNetNuke.Instrumentation.8.0.0.583\lib\net40\DotNetNuke.Instrumentation.dll</HintPath>
+    <Reference Include="DotNetNuke.Instrumentation, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Instrumentation.8.0.0.809\lib\net40\DotNetNuke.Instrumentation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DotNetNuke.Web">
-      <HintPath>packages\DotNetNuke.Web.8.0.0.580\lib\net40\DotNetNuke.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetNuke.Web.Deprecated">
-      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.580\lib\net40\DotNetNuke.Web.Deprecated.dll</HintPath>
+    <Reference Include="DotNetNuke.Web, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DotNetNuke.WebUtility">
-      <HintPath>packages\DotNetNuke.Web.8.0.0.580\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
+      <HintPath>packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetNuke.Web.Deprecated">
+      <HintPath>Externals\DotNetNuke.Web.Deprecated.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Core.8.0.0.583\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <HintPath>packages\DotNetNuke.Core.8.0.0.809\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>Externals\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -79,10 +87,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.580\lib\net40\Telerik.Web.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\BufferedSiteLog.cs" />
@@ -103,6 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\SiteLog.ascx.resx" />
+    <Content Include="Externals\DotNetNuke.Web.Deprecated.dll" />
+    <Content Include="Externals\Telerik.Web.UI.dll" />
     <Content Include="license.txt" />
     <Content Include="module.css" />
     <Content Include="SiteLog.ascx" />
