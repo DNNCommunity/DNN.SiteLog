@@ -57,6 +57,16 @@
                                         <supportsPartialRendering>True</supportsPartialRendering>
                                         <supportsPopUps>True</supportsPopUps>
                                     </moduleControl>
+                                    <moduleControl>
+                                        <controlKey>Settings</controlKey>
+                                        <controlSrc>DesktopModules/SiteLog/Settings.ascx</controlSrc>
+                                        <supportsPartialRendering>False</supportsPartialRendering>
+                                        <controlTitle>Site Log Settings</controlTitle>
+                                        <controlType>Edit</controlType>
+                                        <iconFile />
+                                        <helpUrl />
+                                        <viewOrder>0</viewOrder>
+                                     </moduleControl>
                                 </moduleControls>
                             </moduleDefinition>
                         </moduleDefinitions>

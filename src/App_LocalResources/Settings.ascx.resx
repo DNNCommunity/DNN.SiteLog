@@ -117,52 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="plReportType.Text" xml:space="preserve">
-    <value>Report Type</value>
-  </data>
-  <data name="plReportType.Help" xml:space="preserve">
-    <value>Choose the report you would like to view</value>
-  </data>
-  <data name="plStartDate.Text" xml:space="preserve">
-    <value>Start Date</value>
-  </data>
-  <data name="plStartDate.Help" xml:space="preserve">
-    <value>Select the start date for the report</value>
-  </data>
-  <data name="plEndDate.Text" xml:space="preserve">
-    <value>End Date</value>
-  </data>
-  <data name="plEndDate.Help" xml:space="preserve">
-    <value>Select the end date for the report</value>
-  </data>
-  <data name="Date.Header" xml:space="preserve">
-    <value>This is a date</value>
-  </data>
-  <data name="LogDisabled.Text" xml:space="preserve">
-    <value>The Site Log History Feature For Your Website Has Been Disabled. To enable this feature, go to the settings page.</value>
-  </data>
-  <data name="LogHistory.Text" xml:space="preserve">
-    <value>Your Site Log History Has Been Limited To {0} Days Of Site Log History. To change this go to the settings page.</value>
-  </data>
-  <data name="ControlTitle_.Text" xml:space="preserve">
-    <value>Site Log</value>
-  </data>
-  <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About Site Log&lt;/h1&gt;&lt;p&gt;Administrators can view the details of visitors using their site. There are a variety of reports available to display information regarding site usage, membership, and volumes.&lt;/p&gt;</value>
+  <data name="Database.Text" xml:space="preserve">
+    <value>Database</value>
   </data>
   <data name="FileSystem.Text" xml:space="preserve">
-    <value>The Site Log Viewer Feature For Your Website Have Been Disabled.  The Logs can be viewed offline and are available in the \Logs\ subfolder of your Portal's Home Directory. To enable this feature, go to the settings page.</value>
+    <value>File System</value>
   </data>
-  <data name="valDates.Text" xml:space="preserve">
-    <value>&lt;br/&gt;End Date must be Greater than Start Date</value>
+  <data name="lblSiteLogBuffer.Help" xml:space="preserve">
+    <value>Enter the number of items in the site log buffer.</value>
   </data>
-  <data name="valEndDate.Text" xml:space="preserve">
-    <value>&lt;br/&gt;Invalid end date</value>
+  <data name="lblSiteLogBuffer.Text" xml:space="preserve">
+    <value>Site Log Buffer</value>
   </data>
-  <data name="valStartDate.Text" xml:space="preserve">
-    <value>&lt;br/&gt;Invalid start date</value>
+  <data name="lblSiteLogBufferAfter.Text" xml:space="preserve">
+    <value>Items</value>
   </data>
-  <data name="NoRecords.Text" xml:space="preserve">
-    <value>No records were found</value>
+  <data name="lblSiteLogHistory.Help" xml:space="preserve">
+    <value>Enter the number of days of activity to keep in the site log. (-1 = indefinite)</value>
+  </data>
+  <data name="lblSiteLogHistory.Text" xml:space="preserve">
+    <value>Site Log History</value>
+  </data>
+  <data name="lblSiteLogHistoryAfter.Text" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="lblSiteLogStorage.Help" xml:space="preserve">
+    <value>Select the storage location for the site log.</value>
+  </data>
+  <data name="lblSiteLogStorage.Text" xml:space="preserve">
+    <value>Site Log Storage</value>
+  </data>
+  <data name="SiteLogSettings.Text" xml:space="preserve">
+    <value>Site Log Settings</value>
   </data>
 </root>
