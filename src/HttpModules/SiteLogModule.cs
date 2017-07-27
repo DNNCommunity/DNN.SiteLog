@@ -37,14 +37,14 @@ namespace Dnn.Modules.SiteLog.HttpModules
 
         public void Init(HttpApplication context)
         {
-            context.BeginRequest += OnBeginRequest;
+            context.AuthorizeRequest += OnAuthorizeRequest;
         }
 
         public void Dispose()
         {
         }
 
-        private void OnBeginRequest(object sender, EventArgs e)
+        private void OnAuthorizeRequest(object sender, EventArgs e)
         {
             var application = sender as HttpApplication;
             var context = application.Context;
