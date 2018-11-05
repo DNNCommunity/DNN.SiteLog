@@ -117,8 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\SiteLog.ascx.resx" />
-    <Content Include="Externals\DotNetNuke.Web.Deprecated.dll" />
-    <Content Include="Externals\Telerik.Web.UI.dll" />
     <Content Include="license.txt" />
     <Content Include="module.css" />
     <Content Include="Settings.ascx" />
