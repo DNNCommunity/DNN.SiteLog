@@ -7,7 +7,8 @@
 	</p>	
 	<h4>Bug Fixes</h4>
 	<ul>
-		<li>Issue #4,5,8,9 Added back module settings in order to configure the site log.</li>
+		<li>Issues #4,5,8,9 : Added back module settings in order to configure the site log.</li>
+		<li>Issue #7 : Fixed an issue that prevented logging the user</li>
 	</ul>
 	
 </div>
