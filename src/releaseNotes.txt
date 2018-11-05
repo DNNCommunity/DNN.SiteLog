@@ -1,4 +1,17 @@
 <h3>Newsletters</h3>
+
+<div class="License">
+	<h3>About Site Log</h3>
+	<p class="Owner">
+		<b>Version 8.0.1</b><br /><br />
+	</p>	
+	<h4>Bug Fixes</h4>
+	<ul>
+		<li>None</li>
+	</ul>
+	
+</div>
+
 <div class="License">
 	<h3>About Site Log</h3>
 	<p class="Owner">

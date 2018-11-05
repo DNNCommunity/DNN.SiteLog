@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
     <packages>
-        <package name="DotNetNuke.SiteLog" type="Module" version="08.00.00">
+        <package name="DotNetNuke.SiteLog" type="Module" version="08.00.01">
             <friendlyName>Site Log</friendlyName>
             <description>Administrators can view the details of visitors using their site. There are a variety of reports available to display information regarding site usage, membership, and volumes.</description>
             <iconFile>~/Icons/Sigma/SiteLog_32X32_Standard.png</iconFile>
