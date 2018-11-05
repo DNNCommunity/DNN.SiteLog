@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,7 +45,8 @@
   <ItemGroup>
     <Reference Include="DotNetNuke, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\DotNetNuke.Core.8.0.0.809\lib\net40\DotNetNuke.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DotNetNuke.Instrumentation, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\DotNetNuke.Instrumentation.8.0.0.809\lib\net40\DotNetNuke.Instrumentation.dll</HintPath>
@@ -54,20 +56,16 @@
       <HintPath>packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DotNetNuke.WebUtility">
-      <HintPath>packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="DotNetNuke.Web.Deprecated, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.809\lib\net40\DotNetNuke.Web.Deprecated.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="DotNetNuke.Web.Deprecated">
-      <HintPath>Externals\DotNetNuke.Web.Deprecated.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.809\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\DotNetNuke.Core.8.0.0.809\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Web.UI">
-      <HintPath>Externals\Telerik.Web.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -87,6 +85,11 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.Deprecated.8.0.0.809\lib\net40\Telerik.Web.UI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\BufferedSiteLog.cs" />
@@ -130,6 +133,9 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
